@@ -40,7 +40,7 @@ describe('9-module-1-task', () => {
       _server.close();
     });
 
-    it('неаутентифицированный клиент не может подключиться по вебсокету', (done) => {
+    xit('неаутентифицированный клиент не может подключиться по вебсокету', (done) => {
       client = io('http://localhost:3000');
 
       client.on('error', (err) => {
@@ -49,7 +49,7 @@ describe('9-module-1-task', () => {
       });
     });
 
-    it('аутентифицированный клиент может подключиться по вебсокету', async () => {
+    xit('аутентифицированный клиент может подключиться по вебсокету', async () => {
       const userData = {
         email: 'user@mail.com',
         displayName: 'user',
@@ -73,7 +73,7 @@ describe('9-module-1-task', () => {
       return promise;
     });
 
-    it('сообщения от пользователей сохраняются в базе данных', async () => {
+    xit('сообщения от пользователей сохраняются в базе данных', async () => {
       const userData = {
         email: 'user@mail.com',
         displayName: 'user',
@@ -107,7 +107,7 @@ describe('9-module-1-task', () => {
       return promise;
     });
 
-    it('получение списка сообщений', async () => {
+    xit('получение списка сообщений', async () => {
       const userData = {
         email: 'user@mail.com',
         displayName: 'user',
@@ -152,7 +152,7 @@ describe('9-module-1-task', () => {
       });
     });
 
-    it('незалогиненный пользователь не может сделать запрос на /messages', async () => {
+    xit('незалогиненный пользователь не может сделать запрос на /messages', async () => {
       const response = await request({
         method: 'get',
         uri: 'http://localhost:3001/api/messages',
